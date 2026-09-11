@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --burgundy: #7b2330;
+  --burgundy-dark: #5a1a24;
+  --gold: #c4a574;
+  --gold-soft: #e2d3b5;
+  --cream: #f6f0e6;
+  --parchment: #fbf7f1;
+  --charcoal: #14110f;
+  --charcoal-soft: #1c1814;
+  --ink: #2a241f;
+  --muted: #6f675e;
+}
+
+@theme inline {
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-dark: var(--burgundy-dark);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-parchment: var(--parchment);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  background: var(--burgundy);
+  color: var(--cream);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  border-radius: 999px;
+  background: var(--burgundy);
+  color: white;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.gold-rule {
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.image-reveal {
+  overflow: hidden;
+}
+
+.image-reveal img {
+  transition: transform 800ms ease;
+}
+
+.image-reveal:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 700ms ease both;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .image-reveal:hover img {
+    transform: none;
+  }
+}
