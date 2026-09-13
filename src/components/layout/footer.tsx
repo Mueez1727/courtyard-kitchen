@@ -31,7 +31,7 @@ const socials = [
 export function Footer() {
   return (
     <footer className="bg-charcoal text-cream">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <Logo light />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/70">
@@ -44,7 +44,7 @@ export function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/15 text-cream/80 hover:border-gold hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream hover:bg-gold hover:text-charcoal"
                 aria-label={social.label}
               >
                 <social.icon size={16} />

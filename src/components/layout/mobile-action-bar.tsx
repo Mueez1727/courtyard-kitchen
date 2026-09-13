@@ -17,13 +17,13 @@ export function MobileActionBar() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-charcoal/10 bg-parchment/95 px-2 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden">
-      <div className="grid grid-cols-4 gap-1">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-charcoal/8 bg-parchment/95 px-3 py-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden">
+      <div className="grid grid-cols-4 gap-2">
         {actions.map((action) => {
           const active = !action.external && pathname.startsWith(action.href);
           const className = cn(
-            "flex flex-col items-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-medium",
-            active ? "bg-burgundy text-cream" : "text-charcoal",
+            "flex flex-col items-center gap-1.5 rounded-2xl px-2 py-2.5 text-[11px] font-medium",
+            active ? "bg-burgundy text-cream" : "bg-cream text-charcoal",
           );
           const content = (
             <>

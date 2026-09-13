@@ -5,40 +5,56 @@ import { cn } from "@/lib/utils";
 export function Logo({
   className,
   light = false,
+  overlay = false,
 }: {
   className?: string;
   light?: boolean;
+  overlay?: boolean;
 }) {
   return (
     <Link
       href="/"
-      className={cn("group flex min-w-0 items-center gap-2 sm:gap-3", className)}
+      className={cn("group flex items-center gap-3", className)}
       aria-label={`${restaurant.name} home`}
     >
       <span
         className={cn(
-          "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-xs font-semibold tracking-[0.18em] sm:h-11 sm:w-11 sm:text-sm",
-          light
-            ? "border-gold/60 text-gold"
-            : "border-burgundy/30 text-burgundy",
+          "flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[11px] font-semibold tracking-[0.16em]",
+          light && "bg-gold text-charcoal",
+          overlay && !light && "bg-burgundy text-cream lg:bg-gold lg:text-charcoal",
+          !light && !overlay && "bg-burgundy text-cream",
         )}
         aria-hidden="true"
       >
         CK
       </span>
-      <span className="flex min-w-0 flex-col leading-none">
+      <span className="flex min-w-0 flex-col justify-center leading-none">
         <span
           className={cn(
-            "font-display text-[15px] leading-tight tracking-wide sm:text-xl",
-            light ? "text-cream" : "text-charcoal",
+            "font-display text-[1.15rem] tracking-wide sm:hidden",
+            light && "text-cream",
+            overlay && !light && "text-charcoal lg:text-cream",
+            !light && !overlay && "text-charcoal",
+          )}
+        >
+          Courtyard
+        </span>
+        <span
+          className={cn(
+            "hidden font-display text-xl tracking-wide sm:inline",
+            light && "text-cream",
+            overlay && !light && "text-charcoal lg:text-cream",
+            !light && !overlay && "text-charcoal",
           )}
         >
           {restaurant.name}
         </span>
         <span
           className={cn(
-            "mt-1 text-[10px] uppercase tracking-[0.22em]",
-            light ? "text-gold-soft" : "text-muted",
+            "mt-1 hidden text-[10px] uppercase tracking-[0.22em] sm:block",
+            light && "text-gold-soft",
+            overlay && !light && "text-muted lg:text-gold-soft",
+            !light && !overlay && "text-muted",
           )}
         >
           Rawalpindi

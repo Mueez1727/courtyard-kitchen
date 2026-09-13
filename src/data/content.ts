@@ -15,7 +15,7 @@ export const offers: Offer[] = [
     originalPrice: 4200,
     salePrice: 3490,
     image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80",
+      "/images/bbq-platter.jpg",
     imageAlt: "Family BBQ platter with grilled meats and sides",
     badge: "Save PKR 710",
     active: true,
@@ -161,14 +161,14 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: "ig1",
     image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80",
+      "/images/bbq-platter.jpg",
     alt: "Grilled meats on Instagram",
     href: "https://www.instagram.com/",
   },
   {
     id: "ig2",
     image:
-      "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=700&q=80",
+      "/images/chicken-biryani.jpg",
     alt: "Biryani on Instagram",
     href: "https://www.instagram.com/",
   },

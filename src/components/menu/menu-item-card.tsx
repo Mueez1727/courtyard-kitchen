@@ -39,7 +39,7 @@ export function MenuItemCard({
           </span>
         ) : null}
       </div>
-      <div className="flex flex-1 flex-col p-4 sm:p-5">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="mb-2 flex min-w-0 flex-wrap items-start justify-between gap-x-3 gap-y-1">
           <h3 className="min-w-0 font-display text-xl text-charcoal sm:text-2xl">{item.name}</h3>
           <p className="shrink-0 text-sm font-semibold text-burgundy">

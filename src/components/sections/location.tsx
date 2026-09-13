@@ -50,14 +50,18 @@ export function Location() {
               </p>
               <p className="mt-3 font-display text-2xl leading-snug break-words sm:text-3xl">{getFullAddress()}</p>
               <div className="mt-8 space-y-4 text-sm text-cream/75">
-                <p className="flex items-center gap-3">
-                  <Icons.phone size={18} className="text-gold" />
+                <p className="flex items-center gap-3.5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.phone size={18} />
+                  </span>
                   <a href={getTelHref()} className="hover:text-gold">
                     {restaurant.contact.phoneDisplay}
                   </a>
                 </p>
-                <p className="flex items-start gap-3">
-                  <Icons.clock size={18} className="mt-0.5 text-gold" />
+                <p className="flex items-start gap-3.5">
+                  <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.clock size={18} />
+                  </span>
                   <span>
                     <span
                       className={`mr-2 inline-flex items-center gap-2 font-medium ${status.isOpen ? "text-emerald-300" : "text-gold"}`}

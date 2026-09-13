@@ -18,9 +18,9 @@ export function WhyChooseUs() {
             const Icon = Icons[item.icon as IconName] ?? Icons.sparkle;
             return (
               <FadeIn key={item.id} delay={index * 80}>
-                <article className="h-full rounded-3xl border border-cream/10 bg-charcoal-soft p-7">
-                  <span className="text-gold">
-                    <Icon size={28} />
+                <article className="h-full rounded-3xl bg-charcoal-soft p-6 sm:p-8">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/8 text-gold">
+                    <Icon size={26} />
                   </span>
                   <h3 className="mt-5 font-display text-2xl text-cream">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-cream/70">

@@ -17,11 +17,11 @@ export function Facilities() {
             const Icon = Icons[facility.icon as IconName] ?? Icons.sparkle;
             return (
               <FadeIn key={facility.id} delay={index * 40}>
-                <article className="h-full rounded-3xl border border-charcoal/8 bg-white p-6 transition-transform duration-300 hover:-translate-y-1">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cream text-burgundy">
+                <article className="h-full rounded-3xl bg-white p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-1">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cream text-burgundy">
                     <Icon />
                   </span>
-                  <h3 className="mt-4 font-display text-2xl text-charcoal">
+                  <h3 className="mt-5 font-display text-2xl text-charcoal">
                     {facility.name}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">

@@ -23,10 +23,12 @@ export function ContactSection() {
         />
         <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <FadeIn>
-            <div className="rounded-[1.5rem] bg-charcoal p-5 text-cream sm:rounded-[2rem] sm:p-8">
+            <div className="rounded-[1.5rem] bg-charcoal p-6 text-cream sm:rounded-[2rem] sm:p-8">
               <ul className="space-y-5 text-sm">
-                <li className="flex gap-3">
-                  <Icons.phone className="text-gold" />
+                <li className="flex items-start gap-3.5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.phone size={18} />
+                  </span>
                   <div>
                     <p className="text-cream/50">Phone</p>
                     <a href={getTelHref()} className="text-base hover:text-gold">
@@ -34,8 +36,10 @@ export function ContactSection() {
                     </a>
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <Icons.whatsapp className="text-gold" />
+                <li className="flex items-start gap-3.5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.whatsapp size={18} />
+                  </span>
                   <div>
                     <p className="text-cream/50">WhatsApp</p>
                     <a href={getWhatsAppHref()} className="text-base hover:text-gold">
@@ -43,8 +47,10 @@ export function ContactSection() {
                     </a>
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <Icons.mail className="text-gold" />
+                <li className="flex items-start gap-3.5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.mail size={18} />
+                  </span>
                   <div>
                     <p className="text-cream/50">Email</p>
                     <a href={getMailtoHref()} className="break-all text-base hover:text-gold">
@@ -52,8 +58,10 @@ export function ContactSection() {
                     </a>
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <Icons.pin className="text-gold" />
+                <li className="flex items-start gap-3.5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-gold">
+                    <Icons.pin size={18} />
+                  </span>
                   <div>
                     <p className="text-cream/50">Address</p>
                     <p className="text-base">{getFullAddress()}</p>

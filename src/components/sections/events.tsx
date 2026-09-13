@@ -18,11 +18,11 @@ export function Events() {
             const Icon = Icons[event.icon as IconName] ?? Icons.sparkle;
             return (
               <FadeIn key={event.id} delay={index * 50}>
-                <article className="h-full rounded-3xl bg-white p-6">
-                  <span className="text-burgundy">
+                <article className="h-full rounded-3xl bg-white p-6 sm:p-7">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cream text-burgundy">
                     <Icon />
                   </span>
-                  <h3 className="mt-4 font-display text-xl text-charcoal">{event.title}</h3>
+                  <h3 className="mt-5 font-display text-xl text-charcoal">{event.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{event.description}</p>
                 </article>
               </FadeIn>

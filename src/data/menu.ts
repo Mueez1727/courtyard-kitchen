@@ -129,7 +129,7 @@ export const menuItems: MenuItem[] = [
     price: 2450,
     category: "bbq",
     image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80",
+      "/images/bbq-platter.jpg",
     imageAlt: "Mixed BBQ platter with grilled meats",
     tags: ["popular", "chef"],
     featured: true,
@@ -187,7 +187,7 @@ export const menuItems: MenuItem[] = [
     price: 750,
     category: "pakistani",
     image:
-      "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80",
+      "/images/chicken-biryani.jpg",
     imageAlt: "Chicken biryani served in a bowl",
     tags: ["popular"],
     featured: true,

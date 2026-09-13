@@ -34,6 +34,7 @@ export function SafeImage({ src, alt, className, ...props }: ImageProps) {
       alt={alt}
       className={className}
       loader={remote ? unsplashLoader : undefined}
+      unoptimized={remote}
       onError={() => {
         if (current !== FALLBACK_FOOD) {
           setCurrent(FALLBACK_FOOD);
