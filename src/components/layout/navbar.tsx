@@ -53,10 +53,10 @@ export function Navbar() {
       )}
     >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2.5 sm:gap-4 sm:px-6 sm:py-3 lg:px-8"
         aria-label="Primary"
       >
-        <Logo light={transparent} />
+        <Logo light={transparent} className="min-w-0 flex-1 lg:flex-none" />
 
         <ul className="hidden items-center gap-7 lg:flex">
           {links.map((link) => {
@@ -83,12 +83,12 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={toggleCart}
             className={cn(
-              "relative flex h-11 w-11 items-center justify-center rounded-full border transition-colors",
+              "relative flex h-10 w-10 items-center justify-center rounded-full border transition-colors sm:h-11 sm:w-11",
               transparent
                 ? "border-cream/25 text-cream hover:border-gold hover:text-gold"
                 : "border-charcoal/10 text-charcoal hover:border-burgundy hover:text-burgundy",
@@ -104,7 +104,7 @@ export function Navbar() {
           </button>
           <ButtonLink
             href="/order"
-            className="hidden sm:inline-flex"
+            className="hidden px-4 py-2.5 md:inline-flex"
             variant={transparent ? "gold" : "primary"}
           >
             Order Online
@@ -112,7 +112,7 @@ export function Navbar() {
           <button
             type="button"
             className={cn(
-              "flex h-11 w-11 items-center justify-center rounded-full border lg:hidden",
+              "flex h-10 w-10 items-center justify-center rounded-full border sm:h-11 sm:w-11 lg:hidden",
               transparent
                 ? "border-cream/25 text-cream"
                 : "border-charcoal/10 text-charcoal",
@@ -134,7 +134,7 @@ export function Navbar() {
           open ? "block" : "hidden",
         )}
       >
-        <div className="border-t border-charcoal/8 bg-parchment px-4 py-6">
+        <div className="max-h-[calc(100svh-4.5rem)] overflow-y-auto border-t border-charcoal/8 bg-parchment px-4 py-6 pb-24">
           <ul className="flex flex-col gap-1">
             {links.map((link) => (
               <li key={link.href}>

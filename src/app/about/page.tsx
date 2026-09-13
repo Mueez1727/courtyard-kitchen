@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { restaurant } from "@/data/restaurant";
 import { ButtonLink } from "@/components/ui/button";
+import { SafeImage } from "@/components/ui/safe-image";
 import { EventEnquiryForm } from "@/components/forms/event-enquiry-form";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
             Since {established}
           </p>
-          <h1 className="mt-3 font-display text-5xl text-charcoal sm:text-6xl">
+          <h1 className="mt-3 font-display text-3xl text-charcoal sm:text-5xl lg:text-6xl">
             {about.heading}
           </h1>
           <div className="mt-5 h-px w-16 bg-gold" />
@@ -28,15 +28,15 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-muted">{about.story}</p>
           <p className="mt-4 leading-relaxed text-muted">{about.philosophy}</p>
           <p className="mt-4 leading-relaxed text-muted">{about.quality}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href="/menu">View Menu</ButtonLink>
-            <ButtonLink href="/reservations" variant="outline">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <ButtonLink href="/menu" className="w-full sm:w-auto">View Menu</ButtonLink>
+            <ButtonLink href="/reservations" variant="outline" className="w-full sm:w-auto">
               Reserve a Table
             </ButtonLink>
           </div>
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-          <Image
+        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] sm:rounded-[2rem]">
+          <SafeImage
             src={about.image}
             alt={about.imageAlt}
             fill

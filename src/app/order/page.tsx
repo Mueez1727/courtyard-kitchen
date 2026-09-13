@@ -15,7 +15,7 @@ export default function OrderPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
           Delivery & pickup
         </p>
-        <h1 className="mt-3 font-display text-5xl text-charcoal">Order Online</h1>
+        <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl">Order Online</h1>
         <p className="mt-4 max-w-2xl text-muted">
           Add dishes to your cart, then check out. Delivery is a frontend mockup — connect
           a real ordering or payment provider when the client is ready. Minimum delivery

@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { SafeImage } from "@/components/ui/safe-image";
 import { Icons } from "@/components/ui/icons";
 import { useCart } from "@/lib/cart";
 import { formatPkr } from "@/lib/utils";
@@ -24,9 +24,9 @@ export function MenuItemCard({
   const { addItem } = useCart();
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-charcoal/8 bg-white shadow-[0_18px_40px_-28px_rgba(20,17,15,0.45)]">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-3xl border border-charcoal/8 bg-white shadow-[0_18px_40px_-28px_rgba(20,17,15,0.45)]">
       <div className="image-reveal relative aspect-[4/3] overflow-hidden">
-        <Image
+        <SafeImage
           src={item.image}
           alt={item.imageAlt}
           fill
@@ -39,9 +39,9 @@ export function MenuItemCard({
           </span>
         ) : null}
       </div>
-      <div className="flex flex-1 flex-col p-5">
-        <div className="mb-2 flex items-start justify-between gap-3">
-          <h3 className="font-display text-2xl text-charcoal">{item.name}</h3>
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <div className="mb-2 flex min-w-0 flex-wrap items-start justify-between gap-x-3 gap-y-1">
+          <h3 className="min-w-0 font-display text-xl text-charcoal sm:text-2xl">{item.name}</h3>
           <p className="shrink-0 text-sm font-semibold text-burgundy">
             {formatPkr(item.price)}
           </p>

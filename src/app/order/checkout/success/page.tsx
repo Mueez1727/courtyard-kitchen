@@ -12,7 +12,7 @@ export default function CheckoutSuccessPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
           Demo confirmation
         </p>
-        <h1 className="mt-3 font-display text-5xl text-charcoal">Order received</h1>
+        <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl">Order received</h1>
         <p className="mt-4 text-muted">
           Thank you. In a live website this would go to the kitchen and a rider. Here it
           simply clears your cart so you can show the full guest journey.

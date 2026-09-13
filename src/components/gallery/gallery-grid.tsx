@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 import { galleryCategories, galleryImages } from "@/data/gallery";
+import { SafeImage } from "@/components/ui/safe-image";
 import { Icons } from "@/components/ui/icons";
 import type { GalleryCategory, GalleryImage } from "@/types";
 
@@ -65,12 +65,12 @@ export function GalleryGrid() {
             className="image-reveal mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl"
             onClick={() => setActive(image)}
           >
-            <Image
+            <SafeImage
               src={image.src}
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="w-full object-cover"
+              className="h-auto w-full object-cover"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </button>
@@ -79,7 +79,7 @@ export function GalleryGrid() {
 
       {active ? (
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-charcoal/85 p-4"
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-charcoal/85 p-3 sm:p-4"
           role="dialog"
           aria-modal="true"
           aria-label={active.alt}
@@ -90,19 +90,19 @@ export function GalleryGrid() {
             aria-label="Close lightbox"
             onClick={() => setActive(null)}
           />
-          <div className="relative z-10 w-full max-w-5xl">
-            <Image
+          <div className="relative z-10 w-full max-w-5xl px-1 pb-16 sm:pb-0">
+            <SafeImage
               src={active.src}
               alt={active.alt}
               width={active.width}
               height={active.height}
-              className="max-h-[80vh] w-full rounded-2xl object-contain"
+              className="max-h-[68vh] w-full rounded-2xl object-contain sm:max-h-[80vh]"
             />
-            <p className="mt-3 text-center text-sm text-cream/80">{active.alt}</p>
+            <p className="mt-3 px-6 text-center text-sm text-cream/80">{active.alt}</p>
           </div>
           <button
             type="button"
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-charcoal"
+            className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-charcoal sm:right-4 sm:top-4"
             onClick={() => setActive(null)}
             aria-label="Close"
           >
@@ -110,7 +110,7 @@ export function GalleryGrid() {
           </button>
           <button
             type="button"
-            className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream text-charcoal"
+            className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-charcoal sm:bottom-auto sm:left-3 sm:top-1/2 sm:-translate-y-1/2"
             onClick={() => {
               const index = images.findIndex((image) => image.id === active.id);
               setActive(images[(index - 1 + images.length) % images.length]);
@@ -121,7 +121,7 @@ export function GalleryGrid() {
           </button>
           <button
             type="button"
-            className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream text-charcoal"
+            className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-charcoal sm:bottom-auto sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
             onClick={() => {
               const index = images.findIndex((image) => image.id === active.id);
               setActive(images[(index + 1) % images.length]);

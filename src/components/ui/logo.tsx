@@ -12,12 +12,12 @@ export function Logo({
   return (
     <Link
       href="/"
-      className={cn("group flex items-center gap-3", className)}
+      className={cn("group flex min-w-0 items-center gap-2 sm:gap-3", className)}
       aria-label={`${restaurant.name} home`}
     >
       <span
         className={cn(
-          "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-semibold tracking-[0.18em]",
+          "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-xs font-semibold tracking-[0.18em] sm:h-11 sm:w-11 sm:text-sm",
           light
             ? "border-gold/60 text-gold"
             : "border-burgundy/30 text-burgundy",
@@ -26,10 +26,10 @@ export function Logo({
       >
         CK
       </span>
-      <span className="flex flex-col leading-none">
+      <span className="flex min-w-0 flex-col leading-none">
         <span
           className={cn(
-            "font-display text-lg tracking-wide sm:text-xl",
+            "font-display text-[15px] leading-tight tracking-wide sm:text-xl",
             light ? "text-cream" : "text-charcoal",
           )}
         >
@@ -37,7 +37,7 @@ export function Logo({
         </span>
         <span
           className={cn(
-            "mt-1 text-[10px] uppercase tracking-[0.26em]",
+            "mt-1 text-[10px] uppercase tracking-[0.22em]",
             light ? "text-gold-soft" : "text-muted",
           )}
         >

@@ -84,7 +84,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={getMailtoHref()} className="hover:text-gold">
+              <a href={getMailtoHref()} className="break-all hover:text-gold">
                 {restaurant.contact.email}
               </a>
             </li>
@@ -98,9 +98,9 @@ export function Footer() {
           </h2>
           <ul className="mt-5 space-y-2 text-sm text-cream/75">
             {dayOrder.map((day) => (
-              <li key={day} className="flex justify-between gap-4">
+              <li key={day} className="flex justify-between gap-3">
                 <span>{dayLabels[day]}</span>
-                <span>{formatDayHours(restaurant.hours[day])}</span>
+                <span className="shrink-0 text-right">{formatDayHours(restaurant.hours[day])}</span>
               </li>
             ))}
           </ul>

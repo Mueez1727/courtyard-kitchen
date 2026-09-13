@@ -25,7 +25,7 @@ export function MenuGrid() {
   return (
     <div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1">
+        <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
           <FilterChip
             active={category === "all"}
             onClick={() => setCategory("all")}

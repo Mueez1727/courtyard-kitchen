@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState, type FormEvent } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { SafeImage } from "@/components/ui/safe-image";
 import { Button } from "@/components/ui/button";
 import { Field } from "@/components/forms/form-shared";
 import { restaurant } from "@/data/restaurant";
@@ -60,7 +60,7 @@ export function CheckoutForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-      <div className="space-y-4 rounded-[2rem] bg-white p-6 sm:p-8">
+      <div className="min-w-0 space-y-4 rounded-[1.5rem] bg-white p-5 sm:rounded-[2rem] sm:p-8">
         <h2 className="font-display text-3xl text-charcoal">Your details</h2>
         <Field label="Customer name" name="name" required placeholder="Full name" />
         <Field label="Phone number" name="phone" type="tel" required placeholder="03xx xxxxxxx" />
@@ -157,16 +157,16 @@ export function CheckoutForm() {
         ) : null}
       </div>
 
-      <aside className="h-fit rounded-[2rem] bg-charcoal p-6 text-cream sm:p-8">
+      <aside className="h-fit min-w-0 rounded-[1.5rem] bg-charcoal p-5 text-cream sm:rounded-[2rem] sm:p-8">
         <h2 className="font-display text-3xl">Order summary</h2>
         <ul className="mt-6 space-y-4">
           {items.map((item) => (
             <li key={item.id} className="flex gap-3">
               <div className="relative h-14 w-14 overflow-hidden rounded-xl">
-                <Image src={item.image} alt="" fill className="object-cover" sizes="56px" />
+                <SafeImage src={item.image} alt="" fill className="object-cover" sizes="56px" />
               </div>
-              <div className="flex flex-1 items-start justify-between gap-3 text-sm">
-                <span>
+              <div className="flex min-w-0 flex-1 items-start justify-between gap-3 text-sm">
+                <span className="min-w-0 break-words">
                   {item.name}
                   <span className="block text-cream/50">× {item.quantity}</span>
                 </span>

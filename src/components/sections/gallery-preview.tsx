@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SafeImage } from "@/components/ui/safe-image";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ButtonLink } from "@/components/ui/button";
@@ -16,17 +16,17 @@ export function GalleryPreview() {
           title="Gallery"
           description="Food, rooms, courtyard evenings and celebrations — replace these images with the client's own photography."
         />
-        <div className="mt-14 columns-2 gap-4 sm:columns-3 lg:columns-4">
+        <div className="mt-10 columns-1 gap-3 min-[420px]:columns-2 sm:mt-14 sm:columns-3 sm:gap-4 lg:columns-4">
           {preview.map((image, index) => (
-            <FadeIn key={image.id} delay={index * 40} className="mb-4 break-inside-avoid">
+            <FadeIn key={image.id} delay={index * 40} className="mb-3 break-inside-avoid sm:mb-4">
               <Link href="/gallery" className="image-reveal relative block overflow-hidden rounded-2xl">
-                <Image
+                <SafeImage
                   src={image.src}
                   alt={image.alt}
                   width={image.width}
                   height={image.height}
-                  className="w-full object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="h-auto w-full object-cover"
+                  sizes="(max-width: 420px) 100vw, (max-width: 768px) 50vw, 25vw"
                 />
               </Link>
             </FadeIn>

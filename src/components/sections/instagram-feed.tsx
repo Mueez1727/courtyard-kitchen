@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { SafeImage } from "@/components/ui/safe-image";
 import { instagramPosts } from "@/data/content";
 import { restaurant } from "@/data/restaurant";
 
@@ -21,7 +21,7 @@ export function InstagramFeed() {
               rel="noopener noreferrer"
               className="image-reveal relative aspect-square overflow-hidden rounded-2xl"
             >
-              <Image
+              <SafeImage
                 src={post.image}
                 alt={post.alt}
                 fill

@@ -15,7 +15,7 @@ export default function MenuPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
           {restaurant.name}
         </p>
-        <h1 className="mt-3 font-display text-5xl text-charcoal">The Menu</h1>
+        <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl">The Menu</h1>
         <p className="mt-4 max-w-2xl text-muted">
           Pakistani classics, charcoal BBQ, Chinese and continental plates. Prices are
           demonstration values in PKR — replace them with the live menu before launch.

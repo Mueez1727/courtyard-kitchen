@@ -14,7 +14,7 @@ export default function GalleryPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
           Photography
         </p>
-        <h1 className="mt-3 font-display text-5xl text-charcoal">Gallery</h1>
+        <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl">Gallery</h1>
         <p className="mt-4 max-w-2xl text-muted">
           Click any image to open the lightbox. Swap every photo in the gallery data file
           when the client provides their own shots.

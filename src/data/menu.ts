@@ -129,7 +129,7 @@ export const menuItems: MenuItem[] = [
     price: 2450,
     category: "bbq",
     image:
-      "https://images.unsplash.com/photo-1529193591184-b1d5fdd91c84?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Mixed BBQ platter with grilled meats",
     tags: ["popular", "chef"],
     featured: true,
@@ -187,7 +187,7 @@ export const menuItems: MenuItem[] = [
     price: 750,
     category: "pakistani",
     image:
-      "https://images.unsplash.com/photo-1563379091339-03b9d44c903c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Chicken biryani served in a bowl",
     tags: ["popular"],
     featured: true,
@@ -317,7 +317,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     category: "desserts",
     image:
-      "https://images.unsplash.com/photo-1665686310934-8fab52ca9d2d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Gulab jamun in syrup",
     tags: ["vegetarian"],
   },
@@ -382,7 +382,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     category: "drinks",
     image:
-      "https://images.unsplash.com/photo-1511920170033-208997cb3166?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Cup of coffee",
     tags: ["vegetarian"],
   },

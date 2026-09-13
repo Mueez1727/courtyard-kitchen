@@ -37,18 +37,18 @@ export function Location() {
               <iframe
                 title={`Map showing ${restaurant.name} in Rawalpindi`}
                 src={getMapEmbedUrl()}
-                className="h-[360px] w-full lg:h-[520px]"
+                className="h-[240px] w-full border-0 sm:h-[360px] lg:h-[520px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="flex h-full flex-col rounded-[2rem] bg-charcoal p-8 text-cream">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+            <div className="flex h-full min-w-0 flex-col rounded-[1.5rem] bg-charcoal p-5 text-cream sm:rounded-[2rem] sm:p-8">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold sm:text-xs sm:tracking-[0.24em]">
                 Address
               </p>
-              <p className="mt-3 font-display text-3xl leading-snug">{getFullAddress()}</p>
+              <p className="mt-3 font-display text-2xl leading-snug break-words sm:text-3xl">{getFullAddress()}</p>
               <div className="mt-8 space-y-4 text-sm text-cream/75">
                 <p className="flex items-center gap-3">
                   <Icons.phone size={18} className="text-gold" />
@@ -69,17 +69,17 @@ export function Location() {
                   </span>
                 </p>
               </div>
-              <ul className="mt-8 space-y-2 border-t border-cream/10 pt-6 text-sm text-cream/70">
+              <ul className="mt-8 space-y-2 border-t border-cream/10 pt-6 text-xs text-cream/70 sm:text-sm">
                 {dayOrder.map((day) => (
-                  <li key={day} className="flex justify-between gap-4">
+                  <li key={day} className="flex justify-between gap-3">
                     <span className={day === status.todayKey ? "text-gold" : ""}>
                       {dayLabels[day]}
                     </span>
-                    <span>{formatDayHours(restaurant.hours[day])}</span>
+                    <span className="shrink-0 text-right">{formatDayHours(restaurant.hours[day])}</span>
                   </li>
                 ))}
               </ul>
-              <ButtonLink href={getDirectionsUrl()} variant="gold" className="mt-8 w-fit" external>
+              <ButtonLink href={getDirectionsUrl()} variant="gold" className="mt-8 w-full sm:w-fit" external>
                 Get Directions
               </ButtonLink>
             </div>

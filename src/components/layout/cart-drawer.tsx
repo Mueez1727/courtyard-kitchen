@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { SafeImage } from "@/components/ui/safe-image";
 import { usePathname } from "next/navigation";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
@@ -86,11 +86,11 @@ export function CartDrawer() {
               {items.map((item) => (
                 <li key={item.id} className="flex gap-3 rounded-2xl bg-white p-3">
                   <div className="relative h-20 w-20 overflow-hidden rounded-xl">
-                    <Image src={item.image} alt="" fill className="object-cover" sizes="80px" />
+                    <SafeImage src={item.image} alt="" fill className="object-cover" sizes="80px" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
-                      <p className="font-medium text-charcoal">{item.name}</p>
+                      <p className="min-w-0 break-words font-medium text-charcoal">{item.name}</p>
                       <p className="text-sm font-semibold text-burgundy">
                         {formatPkr(item.price * item.quantity)}
                       </p>
@@ -117,7 +117,7 @@ export function CartDrawer() {
         </div>
 
         {items.length > 0 ? (
-          <div className="border-t border-charcoal/10 bg-white px-5 py-5">
+          <div className="border-t border-charcoal/10 bg-white px-5 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
             <dl className="space-y-2 text-sm">
               <div className="flex justify-between text-muted">
                 <dt>Subtotal</dt>

@@ -75,13 +75,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${display.variable} ${sans.variable} h-full antialiased`}
       style={brandVars}
     >
-      <body className="min-h-full bg-parchment font-sans text-ink">
+      <body className="min-h-full max-w-full overflow-x-clip bg-parchment font-sans text-ink">
         <a href="#main" className="skip-link">
           Skip to content
         </a>
         <JsonLd />
         <Providers>
-          <main id="main" className="flex-1 pb-20 md:pb-0">
+          <main id="main" className="flex-1 pb-[calc(5.25rem+env(safe-area-inset-bottom))] md:pb-0">
             {children}
           </main>
         </Providers>

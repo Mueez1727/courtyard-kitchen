@@ -17,7 +17,7 @@ export default function ReservationsPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy">
             Book a table
           </p>
-          <h1 className="mt-3 font-display text-5xl text-charcoal">Reserve a Table</h1>
+          <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl">Reserve a Table</h1>
           <p className="mt-4 text-muted">
             Tell us when you would like to dine. Requests are confirmed by phone.{" "}
             {restaurant.reservations.largeGroupNote}
@@ -37,7 +37,7 @@ export default function ReservationsPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-[2rem] bg-white p-6 sm:p-8">
+        <div className="rounded-[1.5rem] bg-white p-5 sm:rounded-[2rem] sm:p-8">
           <ReservationForm />
         </div>
       </div>

@@ -40,7 +40,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "g4",
-    src: "https://images.unsplash.com/photo-1529193591184-b1d5fdd91c84?auto=format&fit=crop&w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80",
     alt: "Grilled BBQ platter",
     category: "food",
     width: 1200,
@@ -64,7 +64,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "g7",
-    src: "https://images.unsplash.com/photo-1563379091339-03b9d44c903c?auto=format&fit=crop&w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=80",
     alt: "Biryani served at the table",
     category: "food",
     width: 1200,

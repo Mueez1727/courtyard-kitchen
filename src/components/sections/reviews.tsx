@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { FadeIn } from "@/components/ui/fade-in";
+import { SafeImage } from "@/components/ui/safe-image";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ButtonLink } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
@@ -21,7 +21,7 @@ export function Reviews() {
               <article className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-[0_18px_40px_-28px_rgba(20,17,15,0.4)]">
                 <div className="flex items-center gap-3">
                   {review.avatar ? (
-                    <Image
+                    <SafeImage
                       src={review.avatar}
                       alt=""
                       width={48}

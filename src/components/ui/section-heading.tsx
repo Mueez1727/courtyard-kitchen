@@ -16,14 +16,14 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "max-w-2xl",
+        "max-w-2xl px-1",
         align === "center" ? "mx-auto text-center" : "text-left",
       )}
     >
       {eyebrow ? (
         <p
           className={cn(
-            "mb-3 text-xs font-semibold uppercase tracking-[0.28em]",
+            "mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] sm:text-xs sm:tracking-[0.28em]",
             light ? "text-gold-soft" : "text-burgundy",
           )}
         >
@@ -32,7 +32,7 @@ export function SectionHeading({
       ) : null}
       <h2
         className={cn(
-          "font-display text-3xl leading-tight sm:text-4xl lg:text-5xl",
+          "font-display text-[1.75rem] leading-tight sm:text-4xl lg:text-5xl",
           light ? "text-cream" : "text-charcoal",
         )}
       >
